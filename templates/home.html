@@ -1,0 +1,220 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="hero-wrap js-fullheight">
+  <div class="overlay"></div>
+  <div class="container-fluid px-0">
+    <div class="row d-md-flex no-gutters slider-text align-items-end js-fullheight justify-content-end">
+      <img class="one-third align-self-end order-md-last img-fluid" src="{% static 'images/undraw_work_time_lhoj.svg' %}" alt="">
+      <div class="one-forth d-flex align-items-center ftco-animate js-fullheight">
+        <div class="text mt-5">
+          <p class="mb-4 mt-5 pt-5">我们提供 <span class="number" data-number="200000">0</span> 个优秀的职位!</p>
+          <h1 class="mb-5">日本最大的招聘网站</h1>
+
+          <div class="ftco-search">
+            <div class="row">
+              <div class="col-md-12 nav-link-wrap">
+                <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">职位搜索</a>
+
+<!--                   <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Find a Candidate</a> -->
+
+                </div>
+              </div>
+              <div class="col-md-12 tab-wrap">
+
+                <div class="tab-content p-4" id="v-pills-tabContent">
+
+                  <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+                    <form method="get" action="job/search" class="search-job">
+                      {% csrf_token %}
+                      <div class="row no-gutters">
+                        <div class="col-md mr-md-2">
+                          <div class="form-group">
+                            <div class="form-field">
+                              <div class="icon"><span class="icon-briefcase"></span></div>
+                              <input name="q" type="text" class="form-control" placeholder="eg. 东京 营业">
+                            </div>
+                          </div>
+                        </div>
+<!--                         <div class="col-md mr-md-2">
+                          <div class="form-group">
+                            <div class="form-field">
+                              <div class="select-wrap">
+                                <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                <select name="" id="" class="form-control">
+                                  <option value="">营业</option>
+                                  <option value="">美甲</option>
+                                  <option value="">IT</option>
+                                  <option value="">劳务</option>
+                                  <option value="">快递</option>
+                                  <option value="">看门</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md mr-md-2">
+                          <div class="form-group">
+                            <div class="form-field">
+                              <div class="icon"><span class="icon-map-marker"></span></div>
+                              <input type="text" class="form-control" placeholder="勤务地址">
+                            </div>
+                          </div>
+                        </div> -->
+                        <div class="col-md">
+                          <div class="form-group">
+                            <div class="form-field">
+                              <button type="submit" class="form-control btn btn-secondary">搜索</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
+                    <form action="#" class="search-job">
+                      <div class="row">
+                        <div class="col-md">
+                          <div class="form-group">
+                            <div class="form-field">
+                              <div class="icon"><span class="icon-user"></span></div>
+                              <input type="text" class="form-control" placeholder="eg. Adam Scott">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <div class="form-group">
+                            <div class="form-field">
+                              <div class="select-wrap">
+                                <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                <select name="" id="" class="form-control">
+                                  <option value="">Category</option>
+                                  <option value="">Full Time</option>
+                                  <option value="">Part Time</option>
+                                  <option value="">Freelance</option>
+                                  <option value="">Internship</option>
+                                  <option value="">Temporary</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <div class="form-group">
+                            <div class="form-field">
+                              <div class="icon"><span class="icon-map-marker"></span></div>
+                              <input type="text" class="form-control" placeholder="Location">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <div class="form-group">
+                            <div class="form-field">
+                              <button type="submit" class="form-control btn btn-secondary">Search</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <span class="subheading">工作</span>
+            <h2 class="mb-4">热门工作类型</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 ftco-animate">
+            <ul class="category">
+              <li><a href="#">IT开发 <br><span class="number">354</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">营业 <br><span class="number">143</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">推拿 <br><span class="number">100</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">按摩 <br><span class="number">90</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 ftco-animate">
+            <ul class="category">
+              <li><a href="#">种植 &amp; Training <br><span class="number">100</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">研修生 <br><span class="number">200</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">介护 <br><span class="number">300</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">搬家 <br><span class="number">150</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 ftco-animate">
+            <ul class="category">
+              <li><a href="#">物产店 <br><span class="number">400</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">收纳 <br><span class="number">100</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">金融 <br><span class="number">222</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">收银<br><span class="number">123</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 ftco-animate">
+            <ul class="category">
+              <li><a href="#">清洁 <br><span class="number">324</span> <span>职位</span></span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">导游 <br><span class="number">564</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">奢侈品 <br><span class="number">234</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">整骨院 <br><span class="number">425</span> <span>职位</span><i class="ion-ios-arrow-forward"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="ftco-section services-section bg-primary">
+  <div class="container">
+    <div class="row d-flex">
+      <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block">
+          <div class="icon"><span class="flaticon-resume"></span></div>
+          <div class="media-body">
+            <h3 class="heading mb-3">工作</h3>
+            <p>已经经过我们专业人员确认.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block">
+          <div class="icon"><span class="flaticon-collaboration"></span></div>
+          <div class="media-body">
+            <h3 class="heading mb-3">应聘</h3>
+            <p>可以通过我们轻松应聘.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block">
+          <div class="icon"><span class="flaticon-promotions"></span></div>
+          <div class="media-body">
+            <h3 class="heading mb-3">升职</h3>
+            <p>让你的职业路径更上一层楼.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block">
+          <div class="icon"><span class="flaticon-employee"></span></div>
+          <div class="media-body">
+            <h3 class="heading mb-3">求职</h3>
+            <p>更专业的求职人员.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
